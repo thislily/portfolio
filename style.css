@@ -25,7 +25,7 @@ body {
         ;
     gap: 15px;
     grid-template-columns: repeat(autofit, minmax(1fr));
-    grid-template-rows: 100px repeat(3, 25%);
+    grid-template-rows: 100px repeat(3, 210px);
     margin: 20px auto;
 }
 
@@ -61,17 +61,18 @@ body {
     align-items: center;
     justify-content: center;
     background-color: hsl(230, 85%, 91%);
+    background-position: center;
+    background-size: cover;
+}
 
+a {
+    text-decoration: none;
 }
 
 #name {
     grid-area: name;
     display: flex;
     align-items: flex-end;
-}
-
-#empty4now {
-    grid-area: none;
 }
 
 #icons {
@@ -136,8 +137,8 @@ i {
 
 h1 {
     font-family: 'Rosario', sans-serif;
-    font-size: 55px;
-    line-height: 50px;
+    font-size: 50px;
+    line-height: 40px;
     letter-spacing: -0.04em;
     margin: 0px;
 }
