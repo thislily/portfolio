@@ -63,6 +63,7 @@ body {
     background-color: hsl(230, 85%, 91%);
     background-position: center;
     background-size: cover;
+    min-height: 210px;
 }
 
 a {
