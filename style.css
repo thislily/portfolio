@@ -1,0 +1,166 @@
+/*
+font-family: 'Montserrat', sans-serif;
+(400, 400 italic, 600)
+font-family: 'Rosario', sans-serif;
+(400, 600)
+*/
+
+
+
+
+/*grid*/
+
+.grid {
+    display: grid;
+    height: 100vh;
+    width: 95%;
+    grid-template-areas: 
+        'name icons'
+        'box1 box2 '
+        'box3 box4'
+        'box5 contact'
+        ;
+    gap: 15px;
+    grid-template-columns: repeat(autofit, minmax(1fr));
+    grid-template-rows: 100px repeat(3, 25%);
+    margin: 20px auto;
+}
+
+@media screen and (min-width: 850px){
+    
+    .grid {
+        display: grid;
+        height: 100vh;
+        width: 80%;
+        max-width: 1250px;
+        grid-template-areas: 
+            'name name icons'
+            'box1 box2 box3'
+            'box4 box5 contact'
+            ;
+        gap: 20px;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: 20% 300px 300px ;
+        margin: 50px auto;
+    }
+
+}
+
+
+
+
+/*boxes*/
+
+.box {
+    max-width: none;
+    border: 1.5px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#name {
+    grid-area: name;
+    display: flex;
+    align-items: flex-end;
+}
+
+#empty4now {
+    grid-area: none;
+}
+
+#icons {
+    grid-area: icons;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+}
+
+i {
+    font-size: 50px;
+    padding: 0 5px;
+}
+
+#box1 {
+    grid-area: box1;
+}
+
+#box2 {
+    grid-area: box2;
+}
+
+#box3 {
+    grid-area: box3;
+}
+
+#box4 {
+    grid-area: box4;
+}
+
+#box5 {
+    grid-area: box5;
+}
+
+#contact {
+    grid-area: contact;
+    font-family: 'Rosario', sans-serif;
+    text-align: center;
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 480px) {
+    i {
+        font-size: 30px;
+    }    
+}
+
+
+@media screen and (min-width: 850px) {
+    .box {
+        min-height: 300px;
+        max-width: 390;
+    }
+
+}
+
+
+
+/* text */
+
+h1 {
+    font-family: 'Rosario', sans-serif;
+    font-size: 55px;
+    line-height: 50px;
+    letter-spacing: -0.04em;
+    margin: 0px;
+}
+
+h2 {
+    font-family: 'Rosario', sans-serif;
+    font-size: 55px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    margin: 0px;
+
+}
+
+h1, h2 {
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+@media screen and (min-width: 850px) {
+    h1{
+        font-size: 96px;
+        line-height: 80px;
+    }    
+
+    h2 {
+        font-size: 72px;
+    }
+}
